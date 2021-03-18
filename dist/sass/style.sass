@@ -1,3 +1,7 @@
+$text_color: #1eacc7
+$btn_color: #1eacc7
+$icons_color: #1eacc7
+
 *
     font-family: 'Roboto', sans-serif
 
@@ -63,7 +67,7 @@ nav
     margin-top: 19px
     width: 172px
     height: 46px
-    background-image: linear-gradient(to top, #1EACC7 0%, #4CE2FF 100%)
+    background-image: linear-gradient(to top, $btn_color 0%, #4CE2FF 100%)
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
     border: none
     border-radius: 4px
@@ -110,7 +114,7 @@ nav
     margin: 118px auto 0 auto
     width: 259px
     height: 63px
-    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+    background: linear-gradient(0deg, $btn_color 0%, #4CE2FF 100%)
     box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
     border: none
     border-radius: 4px
@@ -131,11 +135,14 @@ nav
     height: 26px
     background-color: #000000
     font-size: 10px
-    font-weight: 400
+    font-weight: 300
     text-transform: uppercase
     text-align: center
     padding-top: 7px
     color: #ffffff
+    &_white
+        background-color: #ffffff
+        color: black
 
 .title
     margin-bottom: 0
@@ -145,6 +152,8 @@ nav
     font-weight: 700
     text-transform: uppercase
     text-align: center
+    &_white
+        color: #ffffff
 
 .subtitle
     margin-top: 9.5px
@@ -152,6 +161,8 @@ nav
     font-weight: 400
     font-size: 17px
     text-align: center
+    &_white
+        color: #ffffff
 
 .reasons .reasons_block
     display: flex
@@ -166,7 +177,7 @@ nav
     margin-right: 26px
     width: 113px
     height: 113px
-    background-color: #1eacc7
+    background-color: $icons_color
     border-radius: 100%
 
 .reasons_descr
@@ -174,7 +185,7 @@ nav
 
     .reasons_subtitle
         line-height: 21px
-        color: #1eacc7
+        color: $text_color
         font-size: 17px
         font-weight: 400
 
@@ -230,3 +241,17 @@ nav
             margin: 0 auto
             border-radius: 100%
             cursor: pointer
+.choice
+    min-height: 895px
+    padding-top: 28px
+    background: url('../img/bg_car.png') bottom no-repeat
+    background-color: black
+    img
+        display: block
+        margin: 28px auto 0 auto
+    &_descr
+        text-align: center
+        font-size: 17px
+        font-weight: 300
+        color: #222222
+        line-height: 24px
