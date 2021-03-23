@@ -1,6 +1,12 @@
 $text_color: #1eacc7
+$second_color: #ff5656
 $btn_color: #1eacc7
 $icons_color: #1eacc7
+
+@mixin btn_hover
+    &:hover
+        background-image: none
+        background-color: #1eacc7
 
 *
     font-family: 'Roboto', sans-serif
@@ -77,6 +83,7 @@ nav
     text-transform: uppercase
     color: #FFFFFF
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    @include btn_hover
 
 .promo
     min-height: 800px
@@ -123,12 +130,14 @@ nav
     text-transform: uppercase
     color: #FFFFFF
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    @include btn_hover
 
 .reasons
     min-height: 500px
     padding: 0 0 65px 0
 
 .label
+    position: relative
     display: block
     margin: 35.5px auto 0 auto
     width: 114px
@@ -141,10 +150,11 @@ nav
     padding-top: 7px
     color: #ffffff
     &_white
-        background-color: #ffffff
-        color: black
+        background-color: #fff
+        color: #000
 
 .title
+    position: relative
     margin-bottom: 0
     margin-top: 19px
     color: #222222
@@ -156,6 +166,7 @@ nav
         color: #ffffff
 
 .subtitle
+    position: relative
     margin-top: 9.5px
     color: #222222
     font-weight: 400
@@ -241,17 +252,90 @@ nav
             margin: 0 auto
             border-radius: 100%
             cursor: pointer
+            &:before
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background-color: $icons_color
+                transition: 0.3s all
+            &::after
+                content: ''
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                height: 14px
+                width: 2px
+                background-color: $icons_color
+                transition: 0.3s all
+            &:hover
+                &:before, &:after
+                    background-color: $second_color
+
 .choice
+    position: relative
     min-height: 895px
-    padding-top: 28px
-    background: url('../img/bg_car.png') bottom no-repeat
-    background-color: black
-    img
+    padding: 2px 0 138px 0
+    background: url('../img/mobile_bg.png') center (center / cover) no-repeat
+
+    &_img
+        position: relative
         display: block
-        margin: 28px auto 0 auto
+        margin: 56px auto 0 auto
     &_descr
         text-align: center
         font-size: 17px
         font-weight: 300
         color: #222222
         line-height: 24px
+    .black
+        position: absolute
+        top: 0
+        left: 0
+        height: 499px
+        width: 100%
+        background-color: #070716
+
+.require
+    padding: 68px 0 84px 0
+    &_block
+        margin: 33px 0
+        &_nmb
+            margin-bottom: 0px
+    &_title
+        color: #1ca8c3
+        font-size: 22px
+        font-weight: 400
+    &_list
+        margin-top: 22px
+        list-style: none
+        padding-left: 50px
+        li
+            position: relative
+            font-size: 17px
+            font-weight: 300
+            line-height: 24px
+            margin-bottom: 10px
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                left: -32px
+                top: 3px
+                width: 21px
+                height: 20px
+                background: url('../icons/check_blue.png') center (center / cover) no-repeat
+    &_descr
+        margin-top: 25px
+        font-size: 17px
+        font-weight: 300
+        line-height: 24px
+        color: #1ca8c3
+    .warning
+        .require_title
+            color: $second_color
+        .require_list
+            li
+                &:before
+                    background: url('../icons/check_red.png') center (center / cover)
