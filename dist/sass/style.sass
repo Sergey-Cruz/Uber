@@ -152,6 +152,8 @@ nav
     &_white
         background-color: #fff
         color: #000
+    &_min
+        width: 72px
 
 .title
     position: relative
@@ -338,4 +340,37 @@ nav
         .require_list
             li
                 &:before
-                    background: url('../icons/check_red.png') center (center / cover)
+                    background: url('../icons/check_red.png') center (center / cover) no-repeat
+.world
+    position: relative
+    min-height: 717px
+    padding: 49px 0
+    background: url('../img/world_bg.png') center (center / cover) no-repeat
+    &_link
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        color: #1fbad6
+        text-transform: uppercase
+        text-align: center
+        font-size: 15px
+        font-weight: 400
+        line-height: 68px
+        bottom: 49px
+        &:hover
+            text-decoration: none
+            color: #fff
+footer
+    position: relative
+    min-height: 150px
+
+.footer_devider
+    &:before
+        content: ''
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: 15px
+        width: 300px
+        height: 4px
+        background-color: $icons_color
