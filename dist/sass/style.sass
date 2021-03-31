@@ -7,6 +7,9 @@ $icons_color: #1eacc7
     &:hover
         background-image: none
         background-color: #1eacc7
+a
+    &:hover
+        text-decoration: none
 
 *
     font-family: 'Roboto', sans-serif
@@ -361,34 +364,79 @@ nav
             text-decoration: none
             color: #fff
 footer
-    position: relative
-    min-height: 150px
-
-.footer_devider
-    &:before
-        content: ''
-        position: absolute
-        left: 50%
-        transform: translateX(-50%)
-        top: 15px
-        width: 300px
-        height: 4px
-        background-color: $icons_color
-.footer_social
-    width: 170px
-    display: flex
-    justify-content: center
-    justify-content: space-between
-    padding: 65px 15px
-    &_item
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 32px
-        height: 32px
-        border-radius: 100%
-        background-color: #070716
-        color: #fff
+    padding: 14px 23px 39px 23px
+    a
         &:hover
             text-decoration: none
-            color: #1ca8c3
+            color: $icons_color
+
+.footer
+    &_devider
+        width: 299px
+        height: 4px
+        background-color: #1fbad6
+        margin: 0 auto
+    &_wrapper
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding-top: 32px
+    &_wrapper > div
+        width: 33%
+        &:nth-child(3)
+            display: flex
+            justify-content: flex-end
+
+    &_social
+        width: 160px
+        display: flex
+        justify-content: space-between
+        &_item
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 4px
+            width: 32px
+            height: 32px
+            background-color: #070716
+            border-radius: 100%
+            i
+                color: #fff
+                &:hover
+                    color: $icons_color
+    &_links
+        width: 390px
+        margin: 0 auto
+        &_main
+            display: flex
+            justify-content: space-between
+            padding: 0 10px
+            a
+                color: #070716
+                font-size: 15px
+                font-weight: 300
+                text-transform: uppercase
+        &_sub
+            display: flex
+            justify-content: space-between
+            margin-top: 10px
+            a
+                color: #999999
+                font-size: 11px
+                font-weight: 300
+                text-transform: uppercase
+        &_lang
+            display: block
+            margin: 0 auto
+            color: #1fbad6
+            font-size: 11px
+            font-weight: 400
+            margin-top: 19px
+            text-transform: uppercase
+            text-align: center
+            &:hover
+                color: #000
+    &_mobile
+        width: 300px
+        display: flex
+        justify-content: space-between
