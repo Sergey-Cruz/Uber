@@ -1,7 +1,5 @@
 a
-    &:hover
-        text-decoration: none
-        color: $text_color
+
 header
     position: relative
     height: 50px
@@ -26,6 +24,9 @@ nav
         font-weight: 300
         font-size: 15px
         color: #FFFFFF
+        &:hover
+            text-decoration: none
+            color: $text_color
 
     &_item
         border-right: 2px dotted black
@@ -64,6 +65,9 @@ nav
         text-align: right
         text-transform: uppercase
         color: #FFFFFF
+        &:hover
+            text-decoration: none
+            color: $icons_color
     &_btn
         margin-top: 19px
         width: 172px
@@ -413,8 +417,7 @@ footer
             font-weight: 400
             margin: 19px 170px
             text-transform: uppercase
-            &:hover
-                color: #000
+
     &_mobile
         width: 300px
         display: flex
